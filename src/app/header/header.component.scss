@@ -1,0 +1,18 @@
+a {
+  color: #af1313;
+}
+a:hover {
+  background-color: #e72929;
+  color: white;
+  transition: all 0.3s linear;
+}
+
+a.logo {
+  padding: 1em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 32px;
+}
+nav ul li a {
+  padding: 1em;
+  display: inline-block;
+}

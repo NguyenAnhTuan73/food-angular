@@ -1,0 +1,11 @@
+<div class="mx-2 d-flex" >
+
+  <div *ngFor="let tag of tags">
+    <a href="" routerLink="/tag/{{ tag.name }}" >
+      <span class="mx-2">{{ tag.name }}({{ tag.count }})</span>
+    </a>
+
+  </div>
+
+
+</div>
