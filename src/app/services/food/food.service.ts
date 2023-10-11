@@ -7,7 +7,7 @@ import { Tag } from 'src/app/shared/models/tag';
 export class FoodService {
   constructor() {}
   getAllFoodsByTag(tag: any): Foods[] {
-    return tag == 'All'
+    return tag === 'All'
       ? this.getAll()
       : this.getAll().filter((food) => food.tags?.includes(tag));
   }
@@ -41,7 +41,7 @@ export class FoodService {
       {
         id: 2,
         name: 'Meatball',
-        cookTime: '10-20',
+        cookTime: '15-25',
         price: 20,
         favorite: false,
         origins: ['singapo'],
@@ -52,7 +52,7 @@ export class FoodService {
       {
         id: 3,
         name: 'Hamburger',
-        cookTime: '10-25',
+        cookTime: '20-25',
         price: 30,
         favorite: false,
         origins: ['campuchia'],
@@ -63,7 +63,7 @@ export class FoodService {
       {
         id: 4,
         name: 'Fried Potatoes',
-        cookTime: '10-20',
+        cookTime: '30-40',
         price: 40,
         favorite: false,
         origins: ['italy'],
@@ -74,7 +74,7 @@ export class FoodService {
       {
         id: 5,
         name: 'Chicken Soup',
-        cookTime: '10-20',
+        cookTime: '15-30',
         price: 50,
         favorite: true,
         origins: ['China'],
@@ -85,7 +85,7 @@ export class FoodService {
       {
         id: 6,
         name: 'Vegetables Pizza',
-        cookTime: '10-20',
+        cookTime: '5-25',
         price: 56,
         favorite: false,
         origins: ['indian'],
@@ -96,7 +96,7 @@ export class FoodService {
       {
         id: 7,
         name: 'Food7',
-        cookTime: '10-20',
+        cookTime: '12-30',
         price: 75,
         favorite: true,
         origins: ['Japan'],
@@ -107,7 +107,7 @@ export class FoodService {
       {
         id: 8,
         name: 'Food8',
-        cookTime: '10-20',
+        cookTime: '10-35',
         price: 58,
         favorite: false,
         origins: ['laos'],
@@ -123,5 +123,10 @@ export class FoodService {
       food.name.toLowerCase().includes(searchName.toLowerCase())
     })
 
+  }
+
+  // get data food by id
+  getFoodById(id:number):Foods{
+    return this.getAll().find(item => item.id ==id)!;
   }
 }

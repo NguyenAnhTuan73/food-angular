@@ -8,9 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { TagsComponent } from './tags/tags.component';
+import { FoodPageComponent } from './food-page/food-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, TagsComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, TagsComponent, FoodPageComponent, CartPageComponent],
   imports: [BrowserModule, NgbModule, AppRoutingModule, FormsModule,ReactiveFormsModule  ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let cartItem of cart.items">
+    <div>
+      <img [src]="cartItem.food.imageUrl" alt="photo">
+    </div>
+    <div>
+      <a href="" routerLink="/food/{{cartItem.food.id}}">
+        {{cartItem.food.name}}
+      </a>
+    </div>
+  </li>
+</ul>
